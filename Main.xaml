@@ -1,0 +1,365 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1788,3647" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="76">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="108">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="699,3582" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Default="google.com.br" Name="var_strLinkNavegador" />
+      <Variable x:TypeArguments="x:Int32" Name="var_IntContador" />
+      <Variable x:TypeArguments="x:String" Default="Clima Laguna – SC" Name="Var_strCidadeBusca" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="var_strTemperatura" />
+      <Variable x:TypeArguments="sd:DataTable" Name="var_dtCapturaClima" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="657,141" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome" />
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="abrir navegador para realizar a consulta" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Google" sap:VirtualizedContainerService.HintSize="657,3313" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="a4a0287e-c86a-46cf-a995-433b4dfc1deb" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="623,3061" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" sap2010:Annotation.AnnotationText="preenchendo campo com o nome da cidade desejada" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="581,276" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="a4a0287e-c86a-46cf-a995-433b4dfc1deb" Text="[Var_strCidadeBusca + &quot;[k(enter)]&quot;]" Version="V3">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.google.com/" DesignTimeRectangle="678, 483, 480, 40" DesignTimeScaleFactor="1.190000057220459" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='gLFyf' aaname='Pesquisar' /&gt;" Guid="056bd918-c489-4dd7-927a-6c7f4fc29615" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAeQAAAAsCAYAAAC0YsuUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVHhe7dWhDYAwAABBRoGk+89FSJihOAyevjhx6gf4bT/GBADWMmQACDBkAAgwZAAIMGQACDBkAAgwZAAIMGQACDBkAAgwZAAIMGQACDBkAAh4h3xe9ycCAP8wZAAIMGQACDBkAAgwZAAIMGQACDBkAAgwZAAIMGQACDBkAAgwZAAIMGQACDBkAAgwZAAIMGQACDBkAAgwZAAIMGQACDBkAAgwZAAIMGQACHiHDACsY8gAEGDIABBgyAAQYMgAEGDIABBgyAAQYMgAEGDIABBgyAAQYMgAsNyYD/qk5uDbUGh1AAAAAElFTkSuQmCC" InformativeScreenshot="e10abf6611b947e944b276d1f783fd49.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Google' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="639, 491, 24, 24" ElementType="Icon" FriendlyName="'SVG'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;form&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;svg' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' tag='svg' class='' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAYAAAByDd+UAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFLSURBVEhL7ZVNS0JBFIb7KQUuEgIJBBEEaZEQaCCoICS4EdwYLgyETIQsikD8gCgX4sq/eeQ9cUT0nHtHGi4uXDybe+a+z8zcOXPPzi9iFCUnoXeOT5i7K1Cn+0Jf42+a/izoefBG5eqDOtYFU3gZv2LRfLlSef0YUeI6qb4bhCnsdPscPPtd0H2xxOGYBFY8/BxxDavGM+19C1WIUA6c2IG9wTuPaTQf1bqFKpSw7M3tXk3AijEGaHULVegaJBM75FuaQoRptW1a7SceG7QTu3hZYSqdUesax/ENN6fUOPZ4hgsAY2r1xl49CFUIpA9xuxSK5a0+zHPTy+q89CFAkEg10KNyAeBi0DI0TKHwd5f2WYBwSLCNmFClWttMwFUaKgxDWgO4nNZ/C4FI8b3DpF6EwFXqTQjQv/i7RCbEQYpsS105Cb0TsTBGa0t0uasYAjK+AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NExtractData sap2010:Annotation.AnnotationText="extraindo dias, temperaturas e condições do tempo relacionados a cidade desejada" AppendResults="False" ContinueOnError="True" DataTable="[var_dtCapturaClima]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Dia' ReferenceName='Column0'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Temperatura' ReferenceName='Column1'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' Name='Tempo' ReferenceName='Column2'&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='text'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='3' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='alt'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='img' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="581,211" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="a4a0287e-c86a-46cf-a995-433b4dfc1deb" Version="V3">
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="268, 684, 776, 125" DesignTimeScaleFactor="1.190000057220459" FriendlyName="'ter.2678°2373°qua.2780°…'" FullSelectorArgument="&lt;webctrl id='wob_dp' tag='DIV' /&gt;" Guid="4fffe8c1-9289-4720-9153-91354a2a5db8" InformativeScreenshot="5e4efa3798678dc13298c4b2b02379ca.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='clima laguna – sc - Pesquisa Google' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive" />
+              </uix:NExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractData>
+            <ui:WriteCell sap2010:Annotation.AnnotationText="gravando cidade consultada na celular A1" Cell="A1" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="581,147" sap2010:WorkflowViewState.IdRef="WriteCell_3" SheetName="Planilha1" Text="[Var_strCidadeBusca.Replace(&quot;Clima&quot;,&quot;&quot;)]" WorkbookPath="Previsão do tempo.xlsx">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:WriteCell>
+            <ui:ForEachRow ColumnNames="{x:Null}" sap2010:Annotation.AnnotationText="Loop para cada resultado capturado, referente ao clima para cada dia da semana" CurrentIndex="[var_IntContador]" DataTable="[var_dtCapturaClima]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="581,2215" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Corpo" sap:VirtualizedContainerService.HintSize="547,2063" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="verificando qual dia da semana é para preencher a planilha Previsão do tempo" DisplayName="Switch" Expression="[CurrentRow(&quot;Dia&quot;).ToString.ToUpper]" sap:VirtualizedContainerService.HintSize="505,1971" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                      <Switch.Default>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,119" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;dia não encontrado&quot;]" />
+                      </Switch.Default>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence x:Key="SEG." sap:VirtualizedContainerService.HintSize="400,240" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="358,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
+                          <ui:InvokeWorkflowFile.Arguments>
+                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
+                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
+                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
+                              <Literal x:TypeArguments="x:String">B2</Literal>
+                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
+                              <Literal x:TypeArguments="x:String">B3</Literal>
+                            </InArgument>
+                          </ui:InvokeWorkflowFile.Arguments>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InvokeWorkflowFile>
+                      </Sequence>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="TER." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
+                            <Literal x:TypeArguments="x:String">C2</Literal>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
+                            <Literal x:TypeArguments="x:String">C3</Literal>
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="QUA." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
+                            <Literal x:TypeArguments="x:String">D2</Literal>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
+                            <Literal x:TypeArguments="x:String">D3</Literal>
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="QUI." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
+                            <Literal x:TypeArguments="x:String">E2</Literal>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
+                            <Literal x:TypeArguments="x:String">E3</Literal>
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="SEX." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
+                            <Literal x:TypeArguments="x:String">F2</Literal>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
+                            <Literal x:TypeArguments="x:String">F3</Literal>
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="SÁB." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
+                            <Literal x:TypeArguments="x:String">G2</Literal>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
+                            <Literal x:TypeArguments="x:String">G3</Literal>
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="DOM." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
+                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
+                            <Literal x:TypeArguments="x:String">H2</Literal>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
+                            <Literal x:TypeArguments="x:String">H3</Literal>
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:InvokeWorkflowFile>
+                    </Switch>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAARHSURBVFhHvZddbBRVFMf7YrAq+OSbD6Kgb0qUUh60xq9VtA8k1EJrH1CsGIM+GLUmBA0kFi0WSMCHLcVCTMO2GmjFCiUFpH60sUjMEtIGLaAWama32w92dt2vOf7PndPd3M7sdmobf8k/M/fec8//zJ07s7NFXrEsawlUnclkmqEBaAxKisLS14yYKo6VafMHyR5A4hYoTh5BbAw6iLnLJc3cQZ7bkKQRSttp5w7mpqBdKKRY0noDE+7HxEuSZ94gVxA5l0n6wiDwYUwIyVyN9I0RMls/p4l33qDwi8+R4VtNxjOlFF7no/G3XyfzcBOlR/6UaB3kNHBYITbuyJU7zNOj12ly+/tkPL2KjKdKCgsxkx++p+bMhIvIuxIYuB0BjmWPn+qi0Atl7mYFFCp/nP45e0qy5IAH3w7nnsBAo8RkMY8cck3uVVMN2yWTDrwaxNYGFfGjpu12vnK3pKxIbRVFD+yj+DdHKd51DOf7KfJatRYztbueyLIkmw68UtqtQEeLjCl4s4Wef0xLyBqrWUuJ8/0S5SQx0EfhDeV0c/+n0pMfeDYrc5zfiYb2konufdNhPr7lZbKmpiQiP5YZlbPCwNPEKizm5a+WPoUVG6ZU9yKarLsna86PXGYiIhELB7zX8/I3S1uRuVpPqZ5blMx9d1FozUqKnzwuowsLvP1cwIC0FelffNkCWImjS4lSKRldWODdzwWMSVuR6r1bKyB9sUpG3Hnyo6hnnb2kXwi8DS4gKW1F6vQirYDM79tkxB03o3xq/VGz4gIS/2sBLecSMstmuoCwtBWOWxDcICPuuBnlU3u/YwXULdA34YVntQJGeh+kZGbum/CKkXEUcG7QsQfUJpzxGH6cNT/etZQeDayljuEeGfVOoC/pKGB0Qn81w9vPLyJtm1uxqxTrKab6jkdoZWCdkq/jFQrHxyVidm7GLarYa2rmG/0xGc0B70ouYAkq0Ub39O3Imk+rpvtdmkjM/ipO4iet7khcM2e1Oe+/icMd6vcAjYN2t82NqEFlX73kKKL8683Ue/28RDm5PH6NNnUGYDipmfNqxBKO5W9S5gxWYTk6tB1y4lqvo4BpVXz7FjVeaKH2yyfoy99O0mfBVnq1ZyuVBCrUeOmhOnrik7+yBXw/pH/XwisJz/vE3gadu2Q8yxdDnQ5zrypp3Uhlu392PPsMvHaKbQ7082f4RTskR/cfP+B21LiaFFJpWyUdCHZKlhzw+BWHW8VWB8uyDAH89aoxaoZo6097aFWbvcSzafOZD2gwMiyzcyD33zjcK3buIGCFWxEMb87Dg8doy3c7aE1nLa1ur1RX6uvYRLWnt6m9MBS5ItE6bI4LfEhsCiMrEZS58wa5eNkLX/lMUEQxJjZA//ljAHP5j+tOnLrfcy/IavA/Yn5xeIJjoSbM1R+1+YBki6H1SOyH+iEDSoj4nPv8iKlEDfYbblaKiv4FoeF/NqqvoEMAAAAASUVORK5CYII=" InformativeScreenshot="622c5d3a6ce16b2a23c59191e796f957.jpg" Selector="&lt;html app='chrome.exe' title='Google' /&gt;" Url="[var_strLinkNavegador]" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
