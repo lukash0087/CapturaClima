@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1788,3647" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1788,3676" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
       <x:String>System.Activities</x:String>
@@ -105,7 +105,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="699,3582" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="699,3611" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="google.com.br" Name="var_strLinkNavegador" />
       <Variable x:TypeArguments="x:Int32" Name="var_IntContador" />
@@ -118,14 +118,20 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="657,141" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome" />
-    <uix:NApplicationCard sap2010:Annotation.AnnotationText="abrir navegador para realizar a consulta" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Google" sap:VirtualizedContainerService.HintSize="657,3313" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="a4a0287e-c86a-46cf-a995-433b4dfc1deb" Version="V2" WindowResize="Maximize">
+    <ui:KillProcess AppliesTo="{x:Null}" Process="{x:Null}" sap2010:Annotation.AnnotationText="fechando todas as aplicações do google chrome" ContinueOnError="True" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="657,172" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="Chrome">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:KillProcess>
+    <uix:NApplicationCard sap2010:Annotation.AnnotationText="abrir navegador para realizar a consulta" AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Google" sap:VirtualizedContainerService.HintSize="657,3311" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="a4a0287e-c86a-46cf-a995-433b4dfc1deb" Version="V2" WindowResize="Maximize">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="623,3061" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Fazer" sap:VirtualizedContainerService.HintSize="623,3059" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,18 +199,10 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="358,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
                           <ui:InvokeWorkflowFile.Arguments>
-                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
-                              <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
-                              <Literal x:TypeArguments="x:String">B2</Literal>
-                            </InArgument>
-                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
-                              <Literal x:TypeArguments="x:String">B3</Literal>
-                            </InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">[CurrentRow("Temperatura").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">[CurrentRow("Tempo").ToString]</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">B2</InArgument>
+                            <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">B3</InArgument>
                           </ui:InvokeWorkflowFile.Arguments>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -215,18 +213,10 @@
                       </Sequence>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="TER." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
-                            <Literal x:TypeArguments="x:String">C2</Literal>
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
-                            <Literal x:TypeArguments="x:String">C3</Literal>
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">[CurrentRow("Temperatura").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">[CurrentRow("Tempo").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">C2</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">C3</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -236,18 +226,10 @@
                       </ui:InvokeWorkflowFile>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="QUA." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
-                            <Literal x:TypeArguments="x:String">D2</Literal>
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
-                            <Literal x:TypeArguments="x:String">D3</Literal>
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">[CurrentRow("Temperatura").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">[CurrentRow("Tempo").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">D2</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">D3</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -257,18 +239,10 @@
                       </ui:InvokeWorkflowFile>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="QUI." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
-                            <Literal x:TypeArguments="x:String">E2</Literal>
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
-                            <Literal x:TypeArguments="x:String">E3</Literal>
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">[CurrentRow("Temperatura").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">[CurrentRow("Tempo").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">E2</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">E3</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -278,18 +252,10 @@
                       </ui:InvokeWorkflowFile>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="SEX." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
-                            <Literal x:TypeArguments="x:String">F2</Literal>
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
-                            <Literal x:TypeArguments="x:String">F3</Literal>
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">[CurrentRow("Temperatura").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">[CurrentRow("Tempo").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">F2</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">F3</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -299,18 +265,10 @@
                       </ui:InvokeWorkflowFile>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="SÁB." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
-                            <Literal x:TypeArguments="x:String">G2</Literal>
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
-                            <Literal x:TypeArguments="x:String">G3</Literal>
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">[CurrentRow("Temperatura").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">[CurrentRow("Tempo").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">G2</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">G3</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -320,18 +278,10 @@
                       </ui:InvokeWorkflowFile>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" x:Key="DOM." sap2010:Annotation.AnnotationText="workflow de preenchimento de dados" DisplayName="wf_insertPlanilha.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="354,148" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="wf_insertPlanilha.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Temperatura&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CurrentRow(&quot;Tempo&quot;).ToString" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">
-                            <Literal x:TypeArguments="x:String">H2</Literal>
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">
-                            <Literal x:TypeArguments="x:String">H3</Literal>
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTemperatura">[CurrentRow("Temperatura").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strTempo">[CurrentRow("Tempo").ToString]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaTemp">H2</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="arg_In_strCelulaCondic">H3</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
